@@ -37,16 +37,25 @@
 
         <div id="app" class="app">
             <div id="topbar">
-                <a href="index.html"><img src="img/icon.png" class='icon'></a>
-                HLP! others
+                <a href="index.html">
+                    <img src="img/icon.png" class='icon'>&laquo;
+                </a>
             </div>
-            <div id="opentasks"></div>
+
+            <form method="POST">
+                <table>
+                    <tr><td>Name:</td><td><input type="text" name="name" id="reqname"/></td></tr>
+                    <tr><td>Task:</td><td><input type="text" name="task" id="reqtask"/></td></tr>
+                    <tr><td>Location:</td><td><input type="text" name="task" id="reqtask"/></td></tr>
+                </table>
+                <input type="submit" value="post task" id="requestnewtask"/>
+            </form>
+
         </div>
 
         <script type="text/javascript">
             // Init APP script
             app.initialize();
-            getAllRequests();
         </script>
     </body>
 </html>
