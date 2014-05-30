@@ -6,10 +6,12 @@
     "version": "0.0.1",
     "name": "HLP!",
     "pkgName": "com.hitb.hlp",
-    "description": "A sample Apache Cordova application that responds to the deviceready event.",
+    "description": "Frienly neighborhood help app.",
     "developer": {
-        "name": "Apache Cordova Team",
-        "url": "http://cordova.io"
+        "name": "HITB SNE team",
+        "url": "https://github.com/thijsh/HLP-"
     },
-    "icons": {}
+    "icons": {
+        "128": "/icon-128.png"
+    }
 }

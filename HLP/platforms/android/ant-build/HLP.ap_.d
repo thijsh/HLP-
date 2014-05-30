@@ -36,7 +36,9 @@
 /home/thijs/HITB/HLP-/HLP/platforms/android/assets/www/css \
 /home/thijs/HITB/HLP-/HLP/platforms/android/assets/www/run.sh \
 /home/thijs/HITB/HLP-/HLP/platforms/android/assets/www/cordova_plugins.js \
+/home/thijs/HITB/HLP-/HLP/platforms/android/assets/www/img/icon.png \
 /home/thijs/HITB/HLP-/HLP/platforms/android/assets/www/img/logo.png \
+/home/thijs/HITB/HLP-/HLP/platforms/android/assets/www/img/icon-128.png \
 /home/thijs/HITB/HLP-/HLP/platforms/android/assets/www/js/index.js \
 /home/thijs/HITB/HLP-/HLP/platforms/android/assets/www/css/index.css \
 /home/thijs/HITB/HLP-/HLP/platforms/android/ant-build/AndroidManifest.xml \
