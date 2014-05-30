@@ -24,24 +24,15 @@
         <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
         <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
         <link rel="stylesheet" type="text/css" href="css/index.css" />
+        <link rel="stylesheet" type="text/css" href="css/style.css" />
         <link rel="stylesheet" type="text/css" href="css/notification.css" />
         <meta name="msapplication-tap-highlight" content="no" />
         <title>Hello World</title>
     </head>
     <body>
-        <div id="app" class="app" onClick="app.testEvent()">
-            <h1>Apache Cordova</h1>
-            <div id="deviceready" class="blink">
-                <p class="event listening">Connecting to Device</p>
-                <p class="event received">Device is Ready</p>
-            </div>
-        </div>
         <script type="text/javascript" src="cordova.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
         <script type="text/javascript" src="js/fb_sdk.js"></script>
-        <script type="text/javascript">
-            app.initialize();
-        </script>
 
         <script>
   // This is called with the results from from FB.getLoginStatus().
@@ -125,11 +116,13 @@ FB.init({appId: '624950567598252', status: true, cookie: true, xfbml: true, oaut
 
 <fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
 </fb:login-button>
-<button id="fblog" value="test login">Log in (facebook)</button>
 
 <div id="status">
 
 </div>
+<button id="helpreq" class="btn" onclick="document.location='/requesthelp.html'">Request help</button>
+<button id="helpfind" class="btn" onclick="document.location='/helpothers.html'">Help others</button>
+<button id="helpfeed" class="btn" onclick="document.location='/givefeedback.html'">Give Feedback</button>
 
     </body>
 </html>
