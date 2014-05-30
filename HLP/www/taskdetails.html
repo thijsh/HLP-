@@ -38,10 +38,13 @@
 <a href="/index.html">&laquo;</a>
 </div>
     <h3>Task details</h3>
-    <table  onLoad="showTaskDetails()">
+    <table>
         <tr><td>Name</td><td id="detname"></td></tr>
         <tr><td>Task</td><td id="dettask"></td></tr>
     </table>
     <button id="accepttask" class="btn">Accept task</button>
+    <script type="text/javascript">
+        setTimeout(showTaskDetails(), "50");
+    </script>
     </body>
 </html>
