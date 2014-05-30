@@ -4,7 +4,7 @@ window.onload = function (){
 		$('#requestnewtask').on('click', function() {
 			data = {'type': 'request',
 			 'name': $("#reqname").val(),
-			  'task': $("reqtask").val(),
+			  'task': $("#reqtask").val(),
 			  'uid': app.uinqueID(),
 			   'lat': 53.345,
 				'lon': 5.156};
