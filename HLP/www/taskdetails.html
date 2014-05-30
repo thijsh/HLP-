@@ -34,14 +34,23 @@
         <script type="text/javascript" src="js/index.js"></script>
         <script type="text/javascript" src="js/jquery.lib.js"></script>
         <script type="text/javascript" src="js/hlp.js"></script>
-<div id="topbar">
-<a href="/index.html">&laquo;</a>
-</div>
-    <h3>Task details</h3>
-    <table  onLoad="showTaskDetails()">
-        <tr><td>Name</td><td id="detname"></td></tr>
-        <tr><td>Task</td><td id="dettask"></td></tr>
-    </table>
-    <button id="accepttask" class="btn">Accept task</button>
+        
+        <div id="app" class="app">
+            <div id="topbar">
+                <a href="index.html"><img src="img/icon.png" class='icon'></a>
+                Task details
+            </div>
+
+            <table  onLoad="showTaskDetails()">
+                <tr><td>Name</td><td id="detname"></td></tr>
+                <tr><td>Task</td><td id="dettask"></td></tr>
+            </table>
+            <button id="accepttask" class="btn">Accept task</button>
+        </div>
+
+        <script type="text/javascript">
+            // Init APP script
+            app.initialize();
+        </script>
     </body>
 </html>
