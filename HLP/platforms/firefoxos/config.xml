@@ -1,5 +1,11 @@
 <?xml version='1.0' encoding='utf-8'?>
 <widget id="com.hitb.hlp" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <feature name="Notification">
+        <param name="firefoxos-package" value="Notification" />
+    </feature>
+    <feature name="Camera">
+        <param name="firefoxos-package" value="Camera" />
+    </feature>
     <icon height="128" src="www/img/icon-128.png" width="128" />
     <name>HLP!</name>
     <description>

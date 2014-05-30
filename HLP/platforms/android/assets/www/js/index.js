@@ -45,5 +45,41 @@ var app = {
         receivedElement.setAttribute('style', 'display:block;');
 
         console.log('Received Event: ' + id);
+    },
+
+    // Test function
+    testEvent: function() {
+        // Test
+        var onPrompt = function onPrompt(results) {
+          navigator.notification.vibrate(500);
+          alert("You selected button number " + 
+            results.buttonIndex + 
+            " and entered " + results.input1);
+          if (results.buttonIndex == 1) {
+            app.takePicture();
+          }
+        }
+        navigator.notification.vibrate(500);
+        navigator.notification.prompt(
+          'Enter Name', // message
+          onPrompt, // callback to invoke
+          'Prompt Test', // title
+          ['Ok', 'Exit'], // buttonLabels
+          'Doe, Jane' // defaultText
+        );
+    },
+
+    // Take a picture
+    takePicture: function() {
+        navigator.camera.getPicture(function (src) {
+                var img = document.createElement('img');
+                img.id = 'slide';
+                img.src = src;
+                // document.appendChild(img);
+                document.body.insertBefore(img, document.getElementById('app'));
+            }, function () { /* FAILED */}, {
+            destinationType: 1
+        });
+
     }
 };

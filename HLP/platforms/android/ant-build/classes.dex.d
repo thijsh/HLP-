@@ -1,4 +1,26 @@
 /home/thijs/HITB/HLP-/HLP/platforms/android/ant-build/classes.dex : \
+/home/thijs/HITB/HLP-/HLP/platforms/android/ant-build/classes/org/apache/cordova/camera/FileHelper.class \
+/home/thijs/HITB/HLP-/HLP/platforms/android/ant-build/classes/org/apache/cordova/camera/ExifHelper.class \
+/home/thijs/HITB/HLP-/HLP/platforms/android/ant-build/classes/org/apache/cordova/camera/CameraLauncher.class \
+/home/thijs/HITB/HLP-/HLP/platforms/android/ant-build/classes/org/apache/cordova/vibration/Vibration.class \
+/home/thijs/HITB/HLP-/HLP/platforms/android/ant-build/classes/org/apache/cordova/dialogs/Notification$2$1.class \
+/home/thijs/HITB/HLP-/HLP/platforms/android/ant-build/classes/org/apache/cordova/dialogs/Notification$4$1.class \
+/home/thijs/HITB/HLP-/HLP/platforms/android/ant-build/classes/org/apache/cordova/dialogs/Notification$1$2.class \
+/home/thijs/HITB/HLP-/HLP/platforms/android/ant-build/classes/org/apache/cordova/dialogs/Notification$4.class \
+/home/thijs/HITB/HLP-/HLP/platforms/android/ant-build/classes/org/apache/cordova/dialogs/Notification$3.class \
+/home/thijs/HITB/HLP-/HLP/platforms/android/ant-build/classes/org/apache/cordova/dialogs/Notification$2.class \
+/home/thijs/HITB/HLP-/HLP/platforms/android/ant-build/classes/org/apache/cordova/dialogs/Notification$3$1.class \
+/home/thijs/HITB/HLP-/HLP/platforms/android/ant-build/classes/org/apache/cordova/dialogs/Notification$1.class \
+/home/thijs/HITB/HLP-/HLP/platforms/android/ant-build/classes/org/apache/cordova/dialogs/Notification$1$1.class \
+/home/thijs/HITB/HLP-/HLP/platforms/android/ant-build/classes/org/apache/cordova/dialogs/Notification$2$4.class \
+/home/thijs/HITB/HLP-/HLP/platforms/android/ant-build/classes/org/apache/cordova/dialogs/Notification$3$2.class \
+/home/thijs/HITB/HLP-/HLP/platforms/android/ant-build/classes/org/apache/cordova/dialogs/Notification$5$1.class \
+/home/thijs/HITB/HLP-/HLP/platforms/android/ant-build/classes/org/apache/cordova/dialogs/Notification$2$2.class \
+/home/thijs/HITB/HLP-/HLP/platforms/android/ant-build/classes/org/apache/cordova/dialogs/Notification.class \
+/home/thijs/HITB/HLP-/HLP/platforms/android/ant-build/classes/org/apache/cordova/dialogs/Notification$3$4.class \
+/home/thijs/HITB/HLP-/HLP/platforms/android/ant-build/classes/org/apache/cordova/dialogs/Notification$2$3.class \
+/home/thijs/HITB/HLP-/HLP/platforms/android/ant-build/classes/org/apache/cordova/dialogs/Notification$5.class \
+/home/thijs/HITB/HLP-/HLP/platforms/android/ant-build/classes/org/apache/cordova/dialogs/Notification$3$3.class \
 /home/thijs/HITB/HLP-/HLP/platforms/android/ant-build/classes/com/hitb/hlp/R.class \
 /home/thijs/HITB/HLP-/HLP/platforms/android/ant-build/classes/com/hitb/hlp/R$xml.class \
 /home/thijs/HITB/HLP-/HLP/platforms/android/ant-build/classes/com/hitb/hlp/BuildConfig.class \
