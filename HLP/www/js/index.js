@@ -109,7 +109,7 @@ var app = {
     showMapMarker: function(latitude, longitude) {
         var map_canvas = document.getElementById("map_canvas");
         var mapOptions = {
-            zoom: 15, // 15 = neighborhood, // 10 = street
+            zoom: 18, // 13 = city, 15 = center, 18 = block, 20 = street
             center: new google.maps.LatLng(latitude, longitude),
             mapTypeId: google.maps.MapTypeId.ROADMAP
         };
