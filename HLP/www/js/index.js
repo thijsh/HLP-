@@ -19,6 +19,7 @@
 var app = {
     // Application Constructor
     initialize: function() {
+        console.log('Init called');
         this.bindEvents();
     },
     // Bind Event Listeners
@@ -34,23 +35,41 @@ var app = {
     // function, we must explicitly call 'app.receivedEvent(...);'
     onDeviceReady: function() {
         app.receivedEvent('deviceready');
+
+        // DEBUG
+        console.log('Unique device ID: ' + app.uinqueID());
+        var font_size = "" + screen.height / 33 + "px";
+        document.body.style.fontSize = font_size;
+        console.log('Font-size scale: ' + font_size);
     },
     // Update DOM on a Received Event
     receivedEvent: function(id) {
+        /*
         var parentElement = document.getElementById(id);
         var listeningElement = parentElement.querySelector('.listening');
         var receivedElement = parentElement.querySelector('.received');
 
         listeningElement.setAttribute('style', 'display:none;');
         receivedElement.setAttribute('style', 'display:block;');
+        */
 
         console.log('Received Event: ' + id);
+        
+        /*
         console.log('Device Name: '     + device.name );
         console.log('Device PhoneGap: ' + device.phonegap );
         console.log('Device Platform: ' + device.platform );
         console.log('Device UUID: '     + device.uuid );
         console.log('Device Version: '  + device.version );
         console.log('Device Hostname: '  + window.location.host );
+        */
+    },
+
+    // Get unique ID (works for Android and FirefoxOS)
+    uinqueID: function() {
+        if (device.uuid) { return device.uuid; }
+        if (window.location.host) { return window.location.host; }
+        return 'unknown';
     },
 
     // Test function
