@@ -21,6 +21,19 @@
         "contacts": {
             "access": "readwrite",
             "description": "creates contacts"
+        },
+        "geolocation":{
+            "description": "Required for detecting user location"
+        },
+        "device-storage:pictures": {
+          "access": "readwrite",
+          "description": "Allow user to access pictures"
+        },
+        "storage": {
+            "description": "Allow user to save location"
+        },
+        "geolocation": {
+          "description": "Marking out user location"
         }
     },
     "type": "privileged"
