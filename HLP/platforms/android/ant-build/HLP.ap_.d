@@ -29,6 +29,7 @@
 /home/thijs/HITB/HLP-/HLP/platforms/android/ant-build/res/drawable-land-hdpi/screen.png \
 /home/thijs/HITB/HLP-/HLP/platforms/android/assets/_where-is-www.txt \
 /home/thijs/HITB/HLP-/HLP/platforms/android/assets/www \
+/home/thijs/HITB/HLP-/HLP/platforms/android/assets/www/manifest.webapp \
 /home/thijs/HITB/HLP-/HLP/platforms/android/assets/www/img \
 /home/thijs/HITB/HLP-/HLP/platforms/android/assets/www/cordova.js \
 /home/thijs/HITB/HLP-/HLP/platforms/android/assets/www/index.html \
@@ -39,6 +40,7 @@
 /home/thijs/HITB/HLP-/HLP/platforms/android/assets/www/img/icon.png \
 /home/thijs/HITB/HLP-/HLP/platforms/android/assets/www/img/logo.png \
 /home/thijs/HITB/HLP-/HLP/platforms/android/assets/www/img/icon-128.png \
+/home/thijs/HITB/HLP-/HLP/platforms/android/assets/www/img/icon-48.png \
 /home/thijs/HITB/HLP-/HLP/platforms/android/assets/www/js/index.js \
 /home/thijs/HITB/HLP-/HLP/platforms/android/assets/www/css/index.css \
 /home/thijs/HITB/HLP-/HLP/platforms/android/ant-build/AndroidManifest.xml \
