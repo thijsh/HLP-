@@ -52,7 +52,6 @@ html,body {
   display: none;
 }
 
-<<<<<<< HEAD
 TABLE.request {
   width: 100%;
 }
@@ -62,17 +61,16 @@ TABLE.request TR {
   height: 10%;
 }
 
-
 .requestimage {
 	display: block;
-	height: 100px;
-	width: 100px;
+	height: 5em;
+	width: 5em;
 	border: 1px black;
 	padding: 0;
 	margin: 0;
 }
 
-#map_canvas {
+#map_canvas, #map_canvas_small {
   display: none;
   position: absolute;
   left: 0;
@@ -84,6 +82,13 @@ TABLE.request TR {
   margin: 0;
   border: none;
   background: #dddddd;
+}
+
+#map_canvas_small {
+	display: block !important;
+	position: relative;
+	height: 30%;
+	top: 0;
 }
 
 #map_confirm {

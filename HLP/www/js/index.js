@@ -158,7 +158,8 @@ var app = {
 
         var markerOne = new google.maps.Marker({
             position: latitudeAndLongitudeOne,
-            map: map
+            map: map,
+            draggable: true
         });
 
         // mapBounds.extend(latitudeAndLongitudeOne);
@@ -174,5 +175,46 @@ var app = {
         var map_confirm = document.getElementById("map_confirm");
         map_canvas.style.display = 'none';
         map_confirm.style.display = 'none';
-    }
+    },
+
+    // Compare location
+    compareLocation: function(lat, lon) {      
+        navigator.geolocation.getCurrentPosition(function (position) {
+            app.compareMapMarker(lat, lon, position.coords.latitude, position.coords.longitude);
+        }, function (error) {
+            console.log('Error getting GPS Data');
+            navigator.notification.vibrate(500);
+        });
+    },
+
+    // Show map marker 2
+    compareMapMarker: function(lat1, lon1, lat2, lon2) {
+        var map_canvas = document.getElementById("map_canvas_small");
+        var mapOptions = {
+            zoom: 17, // 13 = city, 15 = center, 18 = block, 20 = street
+            center: new google.maps.LatLng(lat1, lon1),
+            mapTypeId: google.maps.MapTypeId.ROADMAP
+        };
+        var map = new google.maps.Map(map_canvas, mapOptions);
+        var mapBounds = new google.maps.LatLngBounds();
+        var latitudeAndLongitudeOne = new google.maps.LatLng(lat1, lon1);
+        var latitudeAndLongitudeTwo = new google.maps.LatLng(lat2, lon2);
+        var iconBase = 'https://maps.google.com/mapfiles/kml/shapes/';
+
+        var markerOne = new google.maps.Marker({
+            position: latitudeAndLongitudeOne,
+            map: map
+        });
+        var markerTwo = new google.maps.Marker({
+            position: latitudeAndLongitudeTwo,
+            map: map,
+            icon: iconBase + 'homegardenbusiness.png'
+        });
+
+        mapBounds.extend(latitudeAndLongitudeOne);
+        mapBounds.extend(latitudeAndLongitudeTwo);
+        map.fitBounds(mapBounds);
+
+        // map_canvas.style.display = 'block';
+    },
 };

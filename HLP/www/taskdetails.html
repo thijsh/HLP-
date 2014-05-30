@@ -26,14 +26,16 @@
         <link rel="stylesheet" type="text/css" href="css/index.css" />
         <link rel="stylesheet" type="text/css" href="css/style.css" />
         <link rel="stylesheet" type="text/css" href="css/notification.css" />
-        <meta name="msapplication-tap-highlight" content="no" />
-        <title>Hello World</title>
-    </head>
-    <body>
+        <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
+        <link href="http://code.google.com/apis/maps/documentation/javascript/examples/default.css"rel="stylesheet"type="text/css" />
         <script type="text/javascript" src="cordova.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
         <script type="text/javascript" src="js/jquery.lib.js"></script>
         <script type="text/javascript" src="js/hlp.js"></script>
+        <meta name="msapplication-tap-highlight" content="no" />
+        <title>Hello World</title>
+    </head>
+    <body>
         
         <div id="app" class="app">
             <div id="topbar">
@@ -45,6 +47,8 @@
                 <tr><td>Name</td><td id="detname"></td></tr>
                 <tr><td>Task</td><td id="dettask"></td></tr>
             </table>
+            <div id="map_canvas_small"></div>
+            
             My name <input type="text" id="acceptusername" name="acceptusername" />
             <button id="accepttask" class="btn">Accept task</button>
         </div>
@@ -52,7 +56,7 @@
         <script type="text/javascript">
             // Init APP script
             app.initialize();
-        setTimeout(showTaskDetails(), "50");
+            setTimeout(showTaskDetails(), "50");
         </script>
     </body>
 </html>

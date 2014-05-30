@@ -11,7 +11,7 @@ window.onload = function (){
 			
 			console.log(data);
 			$.post('https://noveria.nl/hlp/index.php', data, function(data) {
-				document.location='/index.html';
+				document.location='index.html';
 			});
 			return false;
 		});
@@ -24,7 +24,7 @@ window.onload = function (){
 			}
 			console.log(data);
 			$.post('https://noveria.nl/hlp/index.php', data, function(data) {
-				document.location='/index.html';
+				document.location='index.html';
 			});
 			return false;
 
@@ -39,7 +39,7 @@ window.onload = function (){
 			};
 			console.log(data);
 			$.post('https://noveria.nl/hlp/index.php', data, function(data) {
-				document.location='/index.html';
+				document.location='index.html';
 			});
 		});
 	})(jQuery);
@@ -87,7 +87,7 @@ function getMyRequests() {
 }
 
 function gotoTask(nr) {
-	document.location = '/taskdetails.html#' + nr;
+	document.location = 'taskdetails.html#' + nr;
 }
 
 function showTaskDetails() {
@@ -95,11 +95,12 @@ function showTaskDetails() {
 	$.get('https://noveria.nl/hlp/index.php', {'type': 'getSingleRequest', 'id': taskid}, function(request) {
 		$("#dettask").html(request['task']);
 		$("#detname").html(request['name']);
+		app.compareLocation(request['latitude'], request['longitude']);
 	}, "json");
 }
 
 function gotoFeedback(id) {
-	document.location = '/taskfeedback.html#' + id;
+	document.location = 'taskfeedback.html#' + id;
 }
 
 function showFeedbackForm() {
