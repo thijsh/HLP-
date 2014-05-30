@@ -67,8 +67,8 @@ var app = {
 
     // Get unique ID (works for Android and FirefoxOS)
     uinqueID: function() {
-        if (device.uuid) { return device.uuid; }
-        if (window.location.host) { return window.location.host; }
+        if (typeof(device) != 'undefined' && device.uuid) { return device.uuid; }
+        if (window && window.location && window.location.host) { return window.location.host; }
         return 'unknown';
     },
 

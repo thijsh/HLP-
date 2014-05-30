@@ -51,3 +51,7 @@ html,body {
 #fb {
   display: none;
 }
+
+.has-feedback {
+	background-color: rgb(159, 245, 159);
+}
