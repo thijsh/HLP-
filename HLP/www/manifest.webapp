@@ -36,5 +36,11 @@
           "description": "Marking out user location"
         }
     },
-    "type": "privileged"
+    "type": "privileged",
+    "redirects": [
+    {"from": "http://noveria.nl/hitbff/oauth",
+    "to": "/index.html"},
+    {"from": "https://noveria.nl/hitbff/oauth",
+    "to": "/index.html"}
+    ]
 }
