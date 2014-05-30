@@ -42,6 +42,7 @@ var app = {
         document.body.style.fontSize = font_size;
         console.log('Font-size scale: ' + font_size);
     },
+
     // Update DOM on a Received Event
     receivedEvent: function(id) {
         /*
@@ -101,17 +102,32 @@ var app = {
 
     // Take a picture
     takePicture: function() {
-        navigator.camera.getPicture(function (src) {
-                var img = document.createElement('img');
-                img.id = 'slide';
-                img.src = src;
-                // document.appendChild(img);
-                document.body.insertBefore(img, document.getElementById('app'));
-            }, function () { /* FAILED */}, {
-            destinationType: 1
+        navigator.camera.getPicture(app.showPicture, app.pictureError, {
+            quality : 75, 
+            destinationType : Camera.DestinationType.DATA_URL, // Camera.DestinationType.DATA_URL, 
+            sourceType : Camera.PictureSourceType.PHOTOLIBRARY, 
+            allowEdit : true,
+            encodingType: Camera.EncodingType.JPEG,
+            targetWidth: 100,
+            targetHeight: 100
         });
-
     },
+
+    // Show picture
+    showPicture: function (src) {
+        // var img = document.createElement('img');
+        var img = document.getElementById('requestimage');
+        img.src = "data:image/jpeg;base64," + src;
+        console.log("Photo data: data:image/jpeg;base64," + src);
+        // document.appendChild(img);
+        // document.body.insertBefore(img, document.getElementById('app'));
+        
+        // requestimage.parentNode.replaceChild(img, requestimage.childNodes[0]);
+        return true;
+    },
+
+    // Picture error
+    pictureError: function () { console.log("Photo failed"); },
 
     // Get location
     getLocation: function() {      
@@ -119,14 +135,18 @@ var app = {
             console.log('Latitude: ' + position.coords.latitude + '\n' + 
             'Longitude: ' + position.coords.longitude + '\n');
             app.showMapMarker(position.coords.latitude, position.coords.longitude);
+            document.getElementById('latitude').value = position.coords.latitude
+            document.getElementById('longitude').value = position.coords.longitude
         }, function (error) {
             console.log('Error getting GPS Data');
+            navigator.notification.vibrate(500);
         });
     },
 
     // Show map marker
     showMapMarker: function(latitude, longitude) {
         var map_canvas = document.getElementById("map_canvas");
+        var map_confirm = document.getElementById("map_confirm");
         var mapOptions = {
             zoom: 18, // 13 = city, 15 = center, 18 = block, 20 = street
             center: new google.maps.LatLng(latitude, longitude),
@@ -145,5 +165,14 @@ var app = {
         // map.fitBounds(mapBounds);
 
         map_canvas.style.display = 'block';
+        map_confirm.style.display = 'block';
+    },
+
+    // Hide the map again
+    hideMap: function() {
+        var map_canvas = document.getElementById("map_canvas");
+        var map_confirm = document.getElementById("map_confirm");
+        map_canvas.style.display = 'none';
+        map_confirm.style.display = 'none';
     }
 };

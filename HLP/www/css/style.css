@@ -7,7 +7,7 @@ html,body {
 
 .btn {
 	width: 100%;
-	height: 10%;
+	height: 10% !important;
 	padding: 0;
 	margin: 0;
 	font-size: 1em;
@@ -50,4 +50,53 @@ html,body {
 
 #fb {
   display: none;
+}
+
+TABLE.request {
+  width: 100%;
+}
+
+TABLE.request TR {
+  width: 100%;
+  height: 10%;
+}
+
+
+.requestimage {
+	display: block;
+	height: 100px;
+	width: 100px;
+	border: 1px black;
+	padding: 0;
+	margin: 0;
+}
+
+#map_canvas {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 15%;
+  z-index: 1000;
+  width: 100%;
+  height: 70%;
+  padding: 0;
+  margin: 0;
+  border: none;
+  background: #dddddd;
+}
+
+#map_confirm {
+	display: none;
+	position: absolute;
+	bottom: 0;
+	color: #ffffff;
+	font-size: 2em;
+	width: 100%;
+	height: 12%;
+	padding: 5% 0 0 0;
+	text-align: center;
+	margin: 0;
+	background: #ff62ac; /* original: #a94172, dark: #542038, light: #ff62ac, very light: #ffb0d5; */;
+	border: none;
+	box-shadow: 0px 0.5em 0.5em 0px #ffb0d5 inset;
 }

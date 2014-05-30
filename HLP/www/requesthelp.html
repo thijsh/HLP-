@@ -27,13 +27,15 @@
         <link rel="stylesheet" type="text/css" href="css/style.css" />
         <link rel="stylesheet" type="text/css" href="css/notification.css" />
         <meta name="msapplication-tap-highlight" content="no" />
-        <title>Hello World</title>
-    </head>
-    <body>
+        <title>HLP!</title>
+        <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
+        <link href="http://code.google.com/apis/maps/documentation/javascript/examples/default.css"rel="stylesheet"type="text/css" />
         <script type="text/javascript" src="cordova.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
         <script type="text/javascript" src="js/jquery.lib.js"></script>
         <script type="text/javascript" src="js/hlp.js"></script>
+    </head>
+    <body>
 
         <div id="app" class="app">
             <div id="topbar">
@@ -42,13 +44,21 @@
             </div>
 
             <form method="POST">
-                <table>
+                <table class="request">
                     <tr><td>Name:</td><td><input type="text" name="name" id="reqname"/></td></tr>
                     <tr><td>Task:</td><td><input type="text" name="task" id="reqtask"/></td></tr>
-                    <tr><td>Location:</td><td><input type="text" name="l" id="reqtask"/></td></tr>
+                    <tr><td>Location:</td><td>
+                        <input type="button" name="location" id="location" onClick="app.getLocation()" value="GPS location"/>
+                        <input type="hidden" name="latitude" id="latitude"/>
+                        <input type="hidden" name="longitude" id="longitude"/>
+                    </td></tr>
+                    <tr><td>Photo:</td><td><div onClick="app.takePicture()"><img src="img/icon.png" id="requestimage"/></div><input type="hidden" name="imagedata"/></td></tr>
                 </table>
-                <input type="submit" value="post task" id="requestnewtask"/>
             </form>
+            <input type="submit" class="btn" value="Confirm HLP? request" id="requestnewtask"/>
+
+            <div id="map_canvas"></div>
+            <div id="map_confirm" onClick="app.hideMap();">Use this location</div>
 
         </div>
 
