@@ -19,6 +19,7 @@
 var app = {
     // Application Constructor
     initialize: function() {
+        console.log('Init called');
         this.bindEvents();
     },
     // Bind Event Listeners
@@ -34,23 +35,42 @@ var app = {
     // function, we must explicitly call 'app.receivedEvent(...);'
     onDeviceReady: function() {
         app.receivedEvent('deviceready');
+
+        // DEBUG
+        console.log('Unique device ID: ' + app.uinqueID());
+        var font_size = "" + screen.height / 33 + "px";
+        document.body.style.fontSize = font_size;
+        console.log('Font-size scale: ' + font_size);
     },
+
     // Update DOM on a Received Event
     receivedEvent: function(id) {
+        /*
         var parentElement = document.getElementById(id);
         var listeningElement = parentElement.querySelector('.listening');
         var receivedElement = parentElement.querySelector('.received');
 
         listeningElement.setAttribute('style', 'display:none;');
         receivedElement.setAttribute('style', 'display:block;');
+        */
 
         console.log('Received Event: ' + id);
+        
+        /*
         console.log('Device Name: '     + device.name );
         console.log('Device PhoneGap: ' + device.phonegap );
         console.log('Device Platform: ' + device.platform );
         console.log('Device UUID: '     + device.uuid );
         console.log('Device Version: '  + device.version );
         console.log('Device Hostname: '  + window.location.host );
+        */
+    },
+
+    // Get unique ID (works for Android and FirefoxOS)
+    uinqueID: function() {
+        if (device.uuid) { return device.uuid; }
+        if (window.location.host) { return window.location.host; }
+        return 'unknown';
     },
 
     // Test function
@@ -83,15 +103,23 @@ var app = {
     // Take a picture
     takePicture: function() {
         navigator.camera.getPicture(function (src) {
-                var img = document.createElement('img');
-                img.id = 'slide';
-                img.src = src;
+                // var img = document.createElement('img');
+                var img = document.getElementById('requestimage');
+                img.src = "data:image/jpeg;base64," + src;
+                console.log("Photo data: data:image/jpeg;base64," + src);
                 // document.appendChild(img);
-                document.body.insertBefore(img, document.getElementById('app'));
-            }, function () { /* FAILED */}, {
-            destinationType: 1
+                // document.body.insertBefore(img, document.getElementById('app'));
+                
+                // requestimage.parentNode.replaceChild(img, requestimage.childNodes[0]);
+            }, function () { console.log("Photo failed"); }, {
+            quality : 75, 
+            destinationType : Camera.DestinationType.DATA_URL, // Camera.DestinationType.DATA_URL, 
+            sourceType : Camera.PictureSourceType.PHOTOLIBRARY, 
+            allowEdit : true,
+            encodingType: Camera.EncodingType.JPEG,
+            targetWidth: 100,
+            targetHeight: 100
         });
-
     },
 
     // Get location
@@ -100,16 +128,20 @@ var app = {
             console.log('Latitude: ' + position.coords.latitude + '\n' + 
             'Longitude: ' + position.coords.longitude + '\n');
             app.showMapMarker(position.coords.latitude, position.coords.longitude);
+            document.getElementById('latitude').value = position.coords.latitude
+            document.getElementById('longitude').value = position.coords.longitude
         }, function (error) {
             console.log('Error getting GPS Data');
+            navigator.notification.vibrate(500);
         });
     },
 
     // Show map marker
     showMapMarker: function(latitude, longitude) {
         var map_canvas = document.getElementById("map_canvas");
+        var map_confirm = document.getElementById("map_confirm");
         var mapOptions = {
-            zoom: 16,
+            zoom: 18, // 13 = city, 15 = center, 18 = block, 20 = street
             center: new google.maps.LatLng(latitude, longitude),
             mapTypeId: google.maps.MapTypeId.ROADMAP
         };
@@ -126,5 +158,13 @@ var app = {
         // map.fitBounds(mapBounds);
 
         map_canvas.style.display = 'block';
+    },
+
+    // Hide the map again
+    hideMap: function() {
+        var map_canvas = document.getElementById("map_canvas");
+        var map_confirm = document.getElementById("map_confirm");
+        map_canvas.style.display = 'none';
+        map_confirm.style.display = 'none';
     }
 };

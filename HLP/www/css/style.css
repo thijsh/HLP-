@@ -52,6 +52,7 @@ html,body {
   display: none;
 }
 
+<<<<<<< HEAD
 TABLE.request {
   width: 100%;
 }
@@ -99,4 +100,8 @@ TABLE.request TR {
 	background: #ff62ac; /* original: #a94172, dark: #542038, light: #ff62ac, very light: #ffb0d5; */;
 	border: none;
 	box-shadow: 0px 0.5em 0.5em 0px #ffb0d5 inset;
+}
+
+.has-feedback {
+	background-color: rgb(159, 245, 159);
 }

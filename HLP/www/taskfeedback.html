@@ -45,14 +45,16 @@
                 <tr><td>Name</td><td id="detname"></td></tr>
                 <tr><td>Task</td><td id="dettask"></td></tr>
             </table>
-            My name <input type="text" id="acceptusername" name="acceptusername" />
-            <button id="accepttask" class="btn">Accept task</button>
+            <form method ="POST">
+                Feedback: <input type="text" id="feedback" name="feedback" />
+                <button id="sendfeedback" class="btn">Send feedback</button>
+            </form>
         </div>
 
         <script type="text/javascript">
             // Init APP script
             app.initialize();
-        setTimeout(showTaskDetails(), "50");
+        setTimeout(showFeedbackForm(), "50");
         </script>
     </body>
 </html>
