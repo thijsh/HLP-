@@ -37,12 +37,11 @@
 <div id="topbar">
 <a href="/index.html">&laquo;</a>
 </div>
-        <form method="POST">
-          <table>
-            <tr><td>Name:</td><td><input type="text" name="name" id="reqname"/></td></tr>
-            <tr><td>Task:</td><td><input type="text" name="task" id="reqtask"/></td></tr>
-            </table>
-            <input type="button" value="post task" id="requestnewtask"/>
-        </form>
+    <h3>Task details</h3>
+    <table  onLoad="showTaskDetails()">
+        <tr><td>Name</td><td id="detname"></td></tr>
+        <tr><td>Task</td><td id="dettask"></td></tr>
+    </table>
+    <button id="accepttask" class="btn">Accept task</button>
     </body>
 </html>
