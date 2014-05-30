@@ -1,0 +1,18 @@
+.btn {
+	
+	width: 100%;
+}
+
+#topbar {
+	width: 100%;
+	height: 30px;
+	background-color: #555555;
+}
+#topbar a {
+	height: 100%;
+	width: 20px;
+	color: #ffff99;
+	font-size: 3em;
+	font-weight: bold;
+	text-decoration: none;
+}
