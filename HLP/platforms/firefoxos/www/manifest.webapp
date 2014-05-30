@@ -16,6 +16,10 @@
     },
     "default_locale": "en",
     "permissions": {
-        "systemXHR": {}
+        "systemXHR": {},
+        "contacts": {
+            "access": "readwrite",
+            "description": "creates contacts"
+        }
     }
 }

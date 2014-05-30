@@ -36,6 +36,7 @@
 /home/thijs/HITB/HLP-/HLP/platforms/android/assets/www/js \
 /home/thijs/HITB/HLP-/HLP/platforms/android/assets/www/css \
 /home/thijs/HITB/HLP-/HLP/platforms/android/assets/www/run.sh \
+/home/thijs/HITB/HLP-/HLP/platforms/android/assets/www/plugins \
 /home/thijs/HITB/HLP-/HLP/platforms/android/assets/www/cordova_plugins.js \
 /home/thijs/HITB/HLP-/HLP/platforms/android/assets/www/img/icon.png \
 /home/thijs/HITB/HLP-/HLP/platforms/android/assets/www/img/logo.png \
@@ -43,4 +44,18 @@
 /home/thijs/HITB/HLP-/HLP/platforms/android/assets/www/img/icon-48.png \
 /home/thijs/HITB/HLP-/HLP/platforms/android/assets/www/js/index.js \
 /home/thijs/HITB/HLP-/HLP/platforms/android/assets/www/css/index.css \
+/home/thijs/HITB/HLP-/HLP/platforms/android/assets/www/plugins/org.apache.cordova.vibration \
+/home/thijs/HITB/HLP-/HLP/platforms/android/assets/www/plugins/org.apache.cordova.camera \
+/home/thijs/HITB/HLP-/HLP/platforms/android/assets/www/plugins/org.apache.cordova.dialogs \
+/home/thijs/HITB/HLP-/HLP/platforms/android/assets/www/plugins/org.apache.cordova.vibration/www \
+/home/thijs/HITB/HLP-/HLP/platforms/android/assets/www/plugins/org.apache.cordova.vibration/www/vibration.js \
+/home/thijs/HITB/HLP-/HLP/platforms/android/assets/www/plugins/org.apache.cordova.camera/www \
+/home/thijs/HITB/HLP-/HLP/platforms/android/assets/www/plugins/org.apache.cordova.camera/www/CameraConstants.js \
+/home/thijs/HITB/HLP-/HLP/platforms/android/assets/www/plugins/org.apache.cordova.camera/www/CameraPopoverOptions.js \
+/home/thijs/HITB/HLP-/HLP/platforms/android/assets/www/plugins/org.apache.cordova.camera/www/Camera.js \
+/home/thijs/HITB/HLP-/HLP/platforms/android/assets/www/plugins/org.apache.cordova.camera/www/CameraPopoverHandle.js \
+/home/thijs/HITB/HLP-/HLP/platforms/android/assets/www/plugins/org.apache.cordova.dialogs/www \
+/home/thijs/HITB/HLP-/HLP/platforms/android/assets/www/plugins/org.apache.cordova.dialogs/www/android \
+/home/thijs/HITB/HLP-/HLP/platforms/android/assets/www/plugins/org.apache.cordova.dialogs/www/notification.js \
+/home/thijs/HITB/HLP-/HLP/platforms/android/assets/www/plugins/org.apache.cordova.dialogs/www/android/notification.js \
 /home/thijs/HITB/HLP-/HLP/platforms/android/ant-build/AndroidManifest.xml \
