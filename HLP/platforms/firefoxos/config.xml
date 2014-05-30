@@ -17,4 +17,7 @@
     <content src="index.html" />
     <access origin="*" />
     <icon src="www/img/icon.png" />
+    <feature name="Geolocation">
+        <param name="firefoxos-package" value="Geolocation" />
+    </feature>
 </widget>

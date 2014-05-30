@@ -49,6 +49,8 @@ var app = {
 
     // Test function
     testEvent: function() {
+        app.getLocation();
+
         // Test
         var onPrompt = function onPrompt(results) {
           navigator.notification.vibrate(500);
@@ -81,5 +83,15 @@ var app = {
             destinationType: 1
         });
 
+    },
+
+    // Get location
+    getLocation: function() {      
+        navigator.geolocation.getCurrentPosition(function (position) {
+            console.log('Latitude: ' + position.coords.latitude + '\n' + 
+            'Longitude: ' + position.coords.longitude + '\n');
+        }, function (error) {
+            console.log('Error getting GPS Data');
+        });
     }
 };
