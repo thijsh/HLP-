@@ -110,3 +110,7 @@ TABLE.request TR {
 .has-feedback {
 	background-color: rgb(159, 245, 159);
 }
+
+.acceptedTask {
+	background-color: #ffff99;
+}

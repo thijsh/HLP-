@@ -4,10 +4,10 @@ window.onload = function (){
 		$('#requestnewtask').on('click', function() {
 			data = {'type': 'request',
 			 'name': $("#reqname").val(),
-			  'task': $("reqtask").val(),
+			  'task': $("#reqtask").val(),
 			  'uid': app.uinqueID(),
-			   'lat': 53.345,
-				'lon': 5.156};
+			   'lat': $("#latitude").val(),
+				'lon': $("#longitude").val()};
 			
 			console.log(data);
 			$.post('https://noveria.nl/hlp/index.php', data, function(data) {
@@ -74,13 +74,19 @@ function getMyRequests() {
 				if(requests[r].feedback != '') {
 					f_class = 'has-feedback';
 				}
+				else if(requests[r].acceptUID != null) {
+					f_class = 'acceptedTask';
+				}
+				if(requests[r].acceptedBy == '' || requests[r].acceptedBy == null) {
+					requests[r].acceptedBy = '<i>no-one yet</i>';
+				}
 				parent.append('<div class="listmyrequests '+ f_class +'" data-taskid="'+ requests[r].id +'">'+
 					'task: <b>'+ requests[r].task +'</b><br />'+
-					'by: <b>'+ requests[r].name + '</b>'+
+					'accepted by: <b>'+ requests[r].acceptedBy + '</b>'+
 					'</div>');
 				requests[r];
 			}
-			$(".listmyrequests.no-feedback").on('click', function() {
+			$(".listmyrequests.acceptedTask").on('click', function() {
 				gotoFeedback($(this).data('taskid'));
 			});
 		}, 'json');
@@ -107,6 +113,7 @@ function showFeedbackForm() {
 	taskid = document.location.hash.replace("#", "");
 	$.get('https://noveria.nl/hlp/index.php', {'type': 'getSingleRequest', 'id': taskid}, function(request) {
 		$("#dettask").html(request['task']);
-		$("#detname").html(request['name']);
+		$("#detname").html(request['acceptedBy']);
+		console.log(request);
 	}, "json");
 }
