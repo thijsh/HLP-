@@ -48,6 +48,13 @@ module.exports = [
         "clobbers": [
             "CameraPopoverHandle"
         ]
+    },
+    {
+        "file": "plugins/org.apache.cordova.device/www/device.js",
+        "id": "org.apache.cordova.device.device",
+        "clobbers": [
+            "device"
+        ]
     }
 ];
 module.exports.metadata = 
@@ -55,7 +62,9 @@ module.exports.metadata =
 {
     "org.apache.cordova.dialogs": "0.2.7",
     "org.apache.cordova.vibration": "0.3.8",
-    "org.apache.cordova.camera": "0.2.9"
+    "org.apache.cordova.camera": "0.2.9",
+    "org.apache.cordova.geolocation": "0.3.7",
+    "org.apache.cordova.device": "0.2.9"
 }
 // BOTTOM OF METADATA
 });

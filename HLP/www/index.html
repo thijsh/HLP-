@@ -23,6 +23,8 @@
         <meta name="format-detection" content="telephone=no" />
         <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
         <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+        <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
+        <link href="http://code.google.com/apis/maps/documentation/javascript/examples/default.css"rel="stylesheet"type="text/css" />
         <link rel="stylesheet" type="text/css" href="css/index.css" />
         <link rel="stylesheet" type="text/css" href="css/style.css" />
         <link rel="stylesheet" type="text/css" href="css/notification.css" />
@@ -123,6 +125,8 @@ FB.init({appId: '624950567598252', status: true, cookie: true, xfbml: true, oaut
 <button id="helpreq" class="btn" onclick="document.location='/requesthelp.html'">Request help</button>
 <button id="helpfind" class="btn" onclick="document.location='/helpothers.html'">Help others</button>
 <button id="helpfeed" class="btn" onclick="document.location='/givefeedback.html'">Give Feedback</button>
+
+      <div id="map_canvas"></div>
 
     </body>
 </html>

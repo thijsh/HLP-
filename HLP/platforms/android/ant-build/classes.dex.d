@@ -3,6 +3,7 @@
 /home/thijs/HITB/HLP-/HLP/platforms/android/ant-build/classes/org/apache/cordova/camera/ExifHelper.class \
 /home/thijs/HITB/HLP-/HLP/platforms/android/ant-build/classes/org/apache/cordova/camera/CameraLauncher.class \
 /home/thijs/HITB/HLP-/HLP/platforms/android/ant-build/classes/org/apache/cordova/vibration/Vibration.class \
+/home/thijs/HITB/HLP-/HLP/platforms/android/ant-build/classes/org/apache/cordova/device/Device.class \
 /home/thijs/HITB/HLP-/HLP/platforms/android/ant-build/classes/org/apache/cordova/dialogs/Notification$2$1.class \
 /home/thijs/HITB/HLP-/HLP/platforms/android/ant-build/classes/org/apache/cordova/dialogs/Notification$4$1.class \
 /home/thijs/HITB/HLP-/HLP/platforms/android/ant-build/classes/org/apache/cordova/dialogs/Notification$1$2.class \

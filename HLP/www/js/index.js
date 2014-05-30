@@ -45,6 +45,12 @@ var app = {
         receivedElement.setAttribute('style', 'display:block;');
 
         console.log('Received Event: ' + id);
+        console.log('Device Name: '     + device.name );
+        console.log('Device PhoneGap: ' + device.phonegap );
+        console.log('Device Platform: ' + device.platform );
+        console.log('Device UUID: '     + device.uuid );
+        console.log('Device Version: '  + device.version );
+        console.log('Device Hostname: '  + window.location.host );
     },
 
     // Test function
@@ -52,11 +58,16 @@ var app = {
         // Test
         var onPrompt = function onPrompt(results) {
           navigator.notification.vibrate(500);
-          alert("You selected button number " + 
+          /*alert("You selected button number " + 
             results.buttonIndex + 
             " and entered " + results.input1);
+          */
           if (results.buttonIndex == 1) {
+            // Take a picture
             app.takePicture();
+          } else {
+            // Show geolocation
+            app.getLocation();
           }
         }
         navigator.notification.vibrate(500);
@@ -64,8 +75,8 @@ var app = {
           'Enter Name', // message
           onPrompt, // callback to invoke
           'Prompt Test', // title
-          ['Ok', 'Exit'], // buttonLabels
-          'Doe, Jane' // defaultText
+          ['Photo', 'Location'], // buttonLabels
+          'HLP?' // defaultText
         );
     },
 
@@ -81,5 +92,39 @@ var app = {
             destinationType: 1
         });
 
+    },
+
+    // Get location
+    getLocation: function() {      
+        navigator.geolocation.getCurrentPosition(function (position) {
+            console.log('Latitude: ' + position.coords.latitude + '\n' + 
+            'Longitude: ' + position.coords.longitude + '\n');
+            app.showMapMarker(position.coords.latitude, position.coords.longitude);
+        }, function (error) {
+            console.log('Error getting GPS Data');
+        });
+    },
+
+    // Show map marker
+    showMapMarker: function(latitude, longitude) {
+        var map_canvas = document.getElementById("map_canvas");
+        var mapOptions = {
+            zoom: 15, // 15 = neighborhood, // 10 = street
+            center: new google.maps.LatLng(latitude, longitude),
+            mapTypeId: google.maps.MapTypeId.ROADMAP
+        };
+        var map = new google.maps.Map(map_canvas, mapOptions);
+        var mapBounds = new google.maps.LatLngBounds();
+        var latitudeAndLongitudeOne = new google.maps.LatLng(latitude, longitude);
+
+        var markerOne = new google.maps.Marker({
+            position: latitudeAndLongitudeOne,
+            map: map
+        });
+
+        // mapBounds.extend(latitudeAndLongitudeOne);
+        // map.fitBounds(mapBounds);
+
+        map_canvas.style.display = 'block';
     }
 };
