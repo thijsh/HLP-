@@ -20,6 +20,26 @@
         "contacts": {
             "access": "readwrite",
             "description": "creates contacts"
+        },
+        "geolocation": {
+            "description": "Marking out user location"
+        },
+        "device-storage:pictures": {
+            "access": "readwrite",
+            "description": "Allow user to access pictures"
+        },
+        "storage": {
+            "description": "Allow user to save location"
         }
-    }
+    },
+    "redirects": [
+        {
+            "from": "http://noveria.nl/hitbff/oauth",
+            "to": "/index.html"
+        },
+        {
+            "from": "https://noveria.nl/hitbff/oauth",
+            "to": "/index.html"
+        }
+    ]
 }

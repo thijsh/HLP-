@@ -43,10 +43,14 @@
 /home/thijs/HITB/HLP-/HLP/platforms/android/assets/www/img/icon-128.png \
 /home/thijs/HITB/HLP-/HLP/platforms/android/assets/www/img/icon-48.png \
 /home/thijs/HITB/HLP-/HLP/platforms/android/assets/www/js/index.js \
+/home/thijs/HITB/HLP-/HLP/platforms/android/assets/www/js/fb_sdk.js \
 /home/thijs/HITB/HLP-/HLP/platforms/android/assets/www/css/index.css \
+/home/thijs/HITB/HLP-/HLP/platforms/android/assets/www/plugins/org.apache.cordova.device \
 /home/thijs/HITB/HLP-/HLP/platforms/android/assets/www/plugins/org.apache.cordova.vibration \
 /home/thijs/HITB/HLP-/HLP/platforms/android/assets/www/plugins/org.apache.cordova.camera \
 /home/thijs/HITB/HLP-/HLP/platforms/android/assets/www/plugins/org.apache.cordova.dialogs \
+/home/thijs/HITB/HLP-/HLP/platforms/android/assets/www/plugins/org.apache.cordova.device/www \
+/home/thijs/HITB/HLP-/HLP/platforms/android/assets/www/plugins/org.apache.cordova.device/www/device.js \
 /home/thijs/HITB/HLP-/HLP/platforms/android/assets/www/plugins/org.apache.cordova.vibration/www \
 /home/thijs/HITB/HLP-/HLP/platforms/android/assets/www/plugins/org.apache.cordova.vibration/www/vibration.js \
 /home/thijs/HITB/HLP-/HLP/platforms/android/assets/www/plugins/org.apache.cordova.camera/www \
